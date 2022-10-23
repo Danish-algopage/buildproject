@@ -1,0 +1,18 @@
+<div class="container">
+<h1>Services Works!</h1>
+<app-childtoparent [item]="data"></app-childtoparent>
+<button (click)="updateData();" mat-raised-button color="accent">Update the value</button>
+<ul *ngFor="let item of userDetails">
+    <app-userdetails [data]="item"></app-userdetails>
+</ul>
+<div class="secondary-container">
+    <div class="container">
+        <ul>
+            <li><a routerLink="servicelist/1">Service List-1</a></li>
+            <li><a routerLink="servicelist/2">Service List-2</a></li>
+            <li><a routerLink="servicelist/3">Service List-3</a></li>
+            <li><a routerLink="servicelist/4">Service List-4</a></li>
+        </ul>
+    </div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+table, table tr, table tr td{
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+table tr:first-child{
+    background:var(--primary);
+    color:var(--white)
+}

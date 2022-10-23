@@ -1,0 +1,39 @@
+<div class="secondary-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>User Value</h2>
+                <form #userdetails="ngForm" (ngSubmit)=getData(userdetails.value);>
+                    <input type="email" ngModel name="email" placeholder="Enter Your Email">
+                    <input type="password" ngModel name="password" placeholder="Enter Your Password">
+                    <button mat-raised-button color="primary" class="mt-2">Submit</button>
+                </form>
+                <h2>{{ data.email }}</h2>
+                <h2>{{ data.password }}</h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 appRed></h2>
+                <form [formGroup]="userdata" (ngSubmit)="userdatadtl(userdata.value);">
+                    <input type="text" placeholder="Enter Name" formControlName="name">
+                    <p *ngIf="name && name.invalid && name.touched">Please fill the box</p>
+                    <input type="email" placeholder="Enter Email" formControlName="email">
+                    <p *ngIf="email && email.invalid && email.touched">Please fill the box</p>
+                    <input type="password" placeholder="Enter Password" formControlName="password" maxlength="5"
+                        minlength="5">
+                    <p *ngIf="password && password.invalid && password.touched">Please fill the box</p>
+                    <textarea cols="30" rows="10" placeholder="Message" formControlName="message"
+                        maxlength="30"></textarea>
+                    <p *ngIf="message && message.invalid && message.touched">Please fill the box</p>
+                    <button mat-raised-button color="accent" [disabled]="userdata.invalid">Submit</button>
+                </form>
+                <h2>{{ userdtlsdata.name }}</h2>
+                <h2>{{ userdtlsdata.email }}</h2>
+                <h2>{{ userdtlsdata.password }}</h2>
+                <h2>{{ userdtlsdata.message }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="googlemap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14905241.80489502!2d78.69541255765672!3d19.51470428513877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1665072552729!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

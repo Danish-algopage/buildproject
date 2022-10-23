@@ -1,0 +1,14 @@
+form {
+    background-color: #c1bbff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #0000001a
+}
+
+form input, form textarea {
+    background-color: var(--white);
+}
+
+form p {
+    color: red;
+}

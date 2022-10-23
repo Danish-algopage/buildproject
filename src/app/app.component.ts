@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'buildproject';
+  data="X";
+  updateData(item:string){
+    console.log(item);
+    this.data= item;
+  }
+  asdf:any;
+  today= Date();
 }

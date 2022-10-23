@@ -1,0 +1,101 @@
+<ngb-carousel>
+  <ng-template ngbSlide class="carousel-item">
+    <img src="assets/slider-1.jpg" alt="Angular Carousel 1">
+    <div class="carousel-caption">
+      <h1>Title Goes Here</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a routerLink="about" mat-raised-button color="primary">Read More</a>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide class="carousel-item">
+    <img src="assets/slider-3.jpg" alt="Angular Carousel 2">
+    <div class="carousel-caption">
+      <h1>Title Goes Here</h1>
+      <p>Consectetur tortor volutpat pretium.</p>
+      <a routerLink="about" mat-raised-button color="primary">Read More</a>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide class="carousel-item">
+    <img src="assets/slider-3.jpg" alt="Angular Carousel 3">
+    <div class="carousel-caption">
+      <h1>Title Goes Here</h1>
+      <p>Consectetur tortor volutpat pretium.</p>
+      <a routerLink="about" mat-raised-button color="primary">Read More</a>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="homeabout">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-sm-5">
+        <figure>
+          <img src="assets/clothes-fashion.jpg" alt="clothes-fashion">
+        </figure>
+      </div>
+      <div class="col-sm-7">
+        <div class="about-content">
+          <h2>Welcome to Buildproject</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores vitae vero, ipsum cum natus maxime
+            animi ullam pariatur deserunt? Neque nemo molestiae, dicta sequi reiciendis quas, delectus debitis eum vel
+            ipsa fugiat. Hic animi ab facere velit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores vitae vero, ipsum cum natus maxime
+            animi ullam pariatur deserunt? Neque nemo molestiae, dicta sequi reiciendis quas, delectus debitis eum vel
+            ipsa fugiat. Hic animi ab facere velit. Amet nulla saepe ratione ipsum, odit asperiores necessitatibus
+            beatae sapiente rem sint expedita unde vero a, voluptatum, itaque ut porro eum magni alias minima
+            adipisci.</p>
+          <a routerLink="about" mat-raised-button color="primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOME SERVICE SECTION -->
+
+<div class="container">
+  <form #ngAdduser="ngForm" (ngSubmit)="adduser(ngAdduser.value)">
+    <input type="number" ngModel name="number" placeholder="Enter UserID">
+    <input type="text" ngModel name="id" placeholder="Enter Title">
+    <button mat-raised-button color="accent">Add UserID</button>
+  </form>
+</div>
+
+
+<div class="homeservice">
+  <div class="container">
+    <h2 class="heading">Our Services</h2>
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let item of httpData">
+        <div class="homeservicelist">
+          <h3>{{ item.name }}</h3>
+          <ul>
+            <li>{{ item.id }}</li>
+            <li>{{ item.postId }}</li>
+            <li>{{ item.email }}</li>
+          </ul>
+          <p>{{ item.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="serviceuser my-5">
+  <div class="container">
+    <h2>Display userlist by using service in angular</h2>
+    <table border-collapse>
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Age</td>
+      </tr>
+      <tr *ngFor="let data of userinfo">
+        <td>{{ data.name }}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.age }}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
